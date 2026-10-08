@@ -82,6 +82,12 @@ function toggleTask(index) {
 }
 
 function deleteTask(index) {
+    const confirmDelete = confirm("Are you sure you want to delete this task?");
+
+    if (!confirmDelete) {
+        return;
+    }
+
     tasks.splice(index, 1);
     displayTasks();
 }
