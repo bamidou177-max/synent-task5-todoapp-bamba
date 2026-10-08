@@ -34,7 +34,7 @@ function displayTasks() {
                 onchange="toggleTask(${index})"
             >
 
-            <span>${task.text}</span>
+            <span ondblclick="editTask(${index})">${task.text}</span>
 
             <button 
                 class="delete-btn" 
@@ -89,6 +89,23 @@ function deleteTask(index) {
     }
 
     tasks.splice(index, 1);
+    displayTasks();
+}
+function editTask(index) {
+    const newText = prompt("Edit your task:", tasks[index].text);
+
+    if (newText === null) {
+        return;
+    }
+
+    const updatedText = newText.trim();
+
+    if (updatedText === "") {
+        alert("Task cannot be empty.");
+        return;
+    }
+
+    tasks[index].text = updatedText;
     displayTasks();
 }
 
