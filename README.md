@@ -50,3 +50,14 @@ This project was developed as part of the **Synent Technologies Web Development 
 **Bamba Amidou**
 
 GitHub: `bamidou177-max`
+
+## Main Functions
+
+Users can manage their tasks through a simple interface:
+
+- Create a task
+- View or hide the task list
+- Edit a task by double-clicking on it
+- Mark a task as completed
+- Delete a task with confirmation
+- Remove all completed tasks
