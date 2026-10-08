@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do List</title>
+    <link rel="stylesheet" href="tache.css">
+</head>
+<body>
+
+    <main class="app">
+        <div class="header">
+            <h1>TaskFlow</h1>
+            <p>Organize your day. Get things done.</p>
+        </div>
+
+        <div class="task-input">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter a new task..."
+            >
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="task-actions">
+    <button id="viewTasksBtn">View Task List</button>
+</div>
+
+<div id="taskSection" class="task-section">
+    <div class="task-info">
+        <span id="taskCount">0 tasks</span>
+        <button id="clearCompleted">Clear completed</button>
+    </div>
+
+    <ul id="taskList"></ul>
+</div>
+
+<div id="successMessage" class="success-message">
+    Task added successfully!
+</div>
+
+        <div id="emptyMessage" class="empty-message">
+            <div class="empty-icon">✓</div>
+            <h2>No tasks yet</h2>
+            <p>Add your first task to get started.</p>
+        </div>
+    </main>
+
+    <script src="tache.js"></script>
+</body>
+</html>
