@@ -111,8 +111,11 @@ function editTask(index) {
 
 function updateTaskCount() {
     const remainingTasks = tasks.filter(task => !task.completed).length;
+    const completedTasks = tasks.filter(task => task.completed).length;
 
-    if (remainingTasks === 1) {
+    if (remainingTasks === 0) {
+        taskCount.textContent = `${completedTasks} completed`;
+    } else if (remainingTasks === 1) {
         taskCount.textContent = "1 task remaining";
     } else {
         taskCount.textContent = `${remainingTasks} tasks remaining`;
